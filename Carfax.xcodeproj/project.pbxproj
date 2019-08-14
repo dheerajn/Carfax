@@ -7,17 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C816385B2304B4BC009B2120 /* CarfaxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816385A2304B4BC009B2120 /* CarfaxModel.swift */; };
+		C816385F2304B531009B2120 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816385E2304B531009B2120 /* RootViewController.swift */; };
+		C81638612304B55A009B2120 /* CarfaxFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638602304B55A009B2120 /* CarfaxFlowController.swift */; };
+		C81638632304B5BF009B2120 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638622304B5BF009B2120 /* BaseViewController.swift */; };
+		C81638662304B5E4009B2120 /* AlertViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638652304B5E4009B2120 /* AlertViewPresentable.swift */; };
+		C81638692304B60C009B2120 /* LoadingScreenPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638682304B60C009B2120 /* LoadingScreenPresentable.swift */; };
+		C816386B2304B659009B2120 /* NavigationControllerAnimationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816386A2304B659009B2120 /* NavigationControllerAnimationPresentable.swift */; };
+		C816386D2304B6B6009B2120 /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816386C2304B6B6009B2120 /* CustomAlertController.swift */; };
+		C81638702304B6E7009B2120 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816386F2304B6E7009B2120 /* Constants.swift */; };
+		C81638722304B733009B2120 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638712304B733009B2120 /* HelperMethods.swift */; };
 		C8B609F32304B1A40048D165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B609F22304B1A40048D165 /* AppDelegate.swift */; };
-		C8B609F52304B1A40048D165 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B609F42304B1A40048D165 /* ViewController.swift */; };
 		C8B609F82304B1A50048D165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B609F62304B1A50048D165 /* Main.storyboard */; };
 		C8B609FA2304B1A70048D165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B609F92304B1A70048D165 /* Assets.xcassets */; };
 		C8B609FD2304B1A70048D165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B609FB2304B1A70048D165 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C816385A2304B4BC009B2120 /* CarfaxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarfaxModel.swift; sourceTree = "<group>"; };
+		C816385E2304B531009B2120 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		C81638602304B55A009B2120 /* CarfaxFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarfaxFlowController.swift; sourceTree = "<group>"; };
+		C81638622304B5BF009B2120 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C81638652304B5E4009B2120 /* AlertViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewPresentable.swift; sourceTree = "<group>"; };
+		C81638682304B60C009B2120 /* LoadingScreenPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenPresentable.swift; sourceTree = "<group>"; };
+		C816386A2304B659009B2120 /* NavigationControllerAnimationPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerAnimationPresentable.swift; sourceTree = "<group>"; };
+		C816386C2304B6B6009B2120 /* CustomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
+		C816386F2304B6E7009B2120 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C81638712304B733009B2120 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		C8B609EF2304B1A40048D165 /* Carfax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carfax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B609F22304B1A40048D165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8B609F42304B1A40048D165 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C8B609F72304B1A50048D165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8B609F92304B1A70048D165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8B609FC2304B1A70048D165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +53,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C81638562304B485009B2120 /* CarDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C81638592304B4A2009B2120 /* Model */,
+				C81638582304B497009B2120 /* ViewModel */,
+				C81638572304B493009B2120 /* View */,
+			);
+			path = CarDetails;
+			sourceTree = "<group>";
+		};
+		C81638572304B493009B2120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C81638582304B497009B2120 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C81638592304B4A2009B2120 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C816385A2304B4BC009B2120 /* CarfaxModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C816385C2304B522009B2120 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C816386E2304B6DF009B2120 /* Helper */,
+				C81638672304B5FF009B2120 /* Protocols */,
+				C81638642304B5D4009B2120 /* Presentables */,
+				C816385D2304B525009B2120 /* ViewController */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C816385D2304B525009B2120 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C816385E2304B531009B2120 /* RootViewController.swift */,
+				C81638622304B5BF009B2120 /* BaseViewController.swift */,
+				C81638602304B55A009B2120 /* CarfaxFlowController.swift */,
+				C816386C2304B6B6009B2120 /* CustomAlertController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C81638642304B5D4009B2120 /* Presentables */ = {
+			isa = PBXGroup;
+			children = (
+				C81638652304B5E4009B2120 /* AlertViewPresentable.swift */,
+				C816386A2304B659009B2120 /* NavigationControllerAnimationPresentable.swift */,
+			);
+			path = Presentables;
+			sourceTree = "<group>";
+		};
+		C81638672304B5FF009B2120 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C81638682304B60C009B2120 /* LoadingScreenPresentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C816386E2304B6DF009B2120 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C8B609F22304B1A40048D165 /* AppDelegate.swift */,
+				C816386F2304B6E7009B2120 /* Constants.swift */,
+				C81638712304B733009B2120 /* HelperMethods.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		C8B609E62304B1A40048D165 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +153,8 @@
 		C8B609F12304B1A40048D165 /* Carfax */ = {
 			isa = PBXGroup;
 			children = (
-				C8B609F22304B1A40048D165 /* AppDelegate.swift */,
-				C8B609F42304B1A40048D165 /* ViewController.swift */,
+				C816385C2304B522009B2120 /* Common */,
+				C81638562304B485009B2120 /* CarDetails */,
 				C8B609F62304B1A50048D165 /* Main.storyboard */,
 				C8B609F92304B1A70048D165 /* Assets.xcassets */,
 				C8B609FB2304B1A70048D165 /* LaunchScreen.storyboard */,
@@ -135,8 +234,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8B609F52304B1A40048D165 /* ViewController.swift in Sources */,
+				C816385B2304B4BC009B2120 /* CarfaxModel.swift in Sources */,
+				C81638702304B6E7009B2120 /* Constants.swift in Sources */,
+				C81638722304B733009B2120 /* HelperMethods.swift in Sources */,
+				C81638612304B55A009B2120 /* CarfaxFlowController.swift in Sources */,
+				C81638662304B5E4009B2120 /* AlertViewPresentable.swift in Sources */,
+				C816386B2304B659009B2120 /* NavigationControllerAnimationPresentable.swift in Sources */,
+				C816386D2304B6B6009B2120 /* CustomAlertController.swift in Sources */,
+				C81638692304B60C009B2120 /* LoadingScreenPresentable.swift in Sources */,
+				C816385F2304B531009B2120 /* RootViewController.swift in Sources */,
 				C8B609F32304B1A40048D165 /* AppDelegate.swift in Sources */,
+				C81638632304B5BF009B2120 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
