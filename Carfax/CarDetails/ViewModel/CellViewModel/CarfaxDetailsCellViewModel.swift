@@ -24,11 +24,15 @@ class CarfaxDetailsCellViewModel: DetailsTableViewCellConfigurable, AlertViewPre
         self.imageUrl = imageUrl
         
         self.location = location
-        let address = location?.address ?? ""
-        let city = location?.city ?? ""
+        var address = location?.address ?? ""
+        address = address.isEmpty == false ? (address + ", ") : address
+        
+        var city = location?.city ?? ""
+        city = city.isEmpty == false ? (city + ", ") : city
+
         let state = location?.state ?? ""
         
-        let formattedLocation = address + ", " + city + ", " + state
+        let formattedLocation = address + city + state
         self.locationText = formattedLocation
     }
     
