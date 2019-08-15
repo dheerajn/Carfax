@@ -17,7 +17,7 @@ import UIKit
 //• Location
 //• Call dealer button
 
-class CarfaxDetailsViewModel: CarfaxViewModelConfigurable {
+class CarfaxDetailsViewModel: CarfaxViewModelConfigurable, AlertViewPresentable {
     
     fileprivate var flowDelegate: CarfaxFlowDelegate?
     weak var delegate: CarfaxViewModelDelegate?
@@ -105,6 +105,12 @@ extension CarfaxDetailsViewModel {
                     self.delegate?.removeLoadingAnimationFromSuperView()
                 }
                 print(error.localizedDescription)
+                
+                let okAction: CustomAlertAction = (title: "OK", style: UIAlertAction.Style.default, handler: nil)
+                self.displayAlertWithTitle("Something went wrong.",
+                                           message: "Can not download data. Error: \(error.localizedDescription)",
+                    andActions: [okAction])
+                
             }
         }
     }

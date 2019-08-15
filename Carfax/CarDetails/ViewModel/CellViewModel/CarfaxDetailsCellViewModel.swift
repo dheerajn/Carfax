@@ -82,6 +82,7 @@ class CarfaxDetailsCellViewModel: DetailsTableViewCellConfigurable, AlertViewPre
         let cancelAction: CustomAlertAction = (title: "CANCEL", style: UIAlertAction.Style.default, handler: nil)
 
         self.displayAlertWithTitle("You are about to leave the app. Are you fine with this?",
-                                   message: "We will route you to Maps to show you the location of the dealer you selected.", andActions: [okAction, cancelAction])
+                                   message: "We will route you to Maps to show you the location of the dealer you selected.",
+                                   andActions: [okAction, cancelAction])
     }
 }
