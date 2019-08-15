@@ -213,6 +213,7 @@
 		C816386E2304B6DF009B2120 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				C8B609F92304B1A70048D165 /* Assets.xcassets */,
 				C8B609F22304B1A40048D165 /* AppDelegate.swift */,
 				C816386F2304B6E7009B2120 /* Constants.swift */,
 				C81638712304B733009B2120 /* HelperMethods.swift */,
@@ -268,6 +269,7 @@
 		C81638942304E3FB009B2120 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				C8B609FB2304B1A70048D165 /* LaunchScreen.storyboard */,
 				C81638912304E3F5009B2120 /* DetailsTableViewCell.xib */,
 				C8B609F62304B1A50048D165 /* Main.storyboard */,
 			);
@@ -343,8 +345,6 @@
 				C816387D2304BF7A009B2120 /* API */,
 				C816385C2304B522009B2120 /* Common */,
 				C81638562304B485009B2120 /* CarDetails */,
-				C8B609F92304B1A70048D165 /* Assets.xcassets */,
-				C8B609FB2304B1A70048D165 /* LaunchScreen.storyboard */,
 				C8B609FE2304B1A70048D165 /* Info.plist */,
 			);
 			path = Carfax;
