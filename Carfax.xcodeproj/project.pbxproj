@@ -41,6 +41,7 @@
 		C81638A82305A472009B2120 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638A72305A472009B2120 /* UIImageExtension.swift */; };
 		C81638AA2305B32C009B2120 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638A92305B32C009B2120 /* StringExtension.swift */; };
 		C81638AC2305C8E5009B2120 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638AB2305C8E5009B2120 /* UIViewExtension.swift */; };
+		C81638AF2305D2C0009B2120 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638AE2305D2C0009B2120 /* Reachability.swift */; };
 		C8B609F32304B1A40048D165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B609F22304B1A40048D165 /* AppDelegate.swift */; };
 		C8B609F82304B1A50048D165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B609F62304B1A50048D165 /* Main.storyboard */; };
 		C8B609FA2304B1A70048D165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B609F92304B1A70048D165 /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 		C81638A72305A472009B2120 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		C81638A92305B32C009B2120 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C81638AB2305C8E5009B2120 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		C81638AE2305D2C0009B2120 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		C8B609EF2304B1A40048D165 /* Carfax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carfax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B609F22304B1A40048D165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8B609F72304B1A50048D165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		C816385C2304B522009B2120 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C81638AD2305D2AB009B2120 /* Utilities */,
 				C816389A2304ED2E009B2120 /* Extension */,
 				C81638942304E3FB009B2120 /* Storyboards */,
 				C816388F2304E3B4009B2120 /* TableViewCell */,
@@ -306,6 +309,14 @@
 				C81638A32304F48D009B2120 /* DetailsTableViewCellConfigurable.swift */,
 			);
 			path = Configurables;
+			sourceTree = "<group>";
+		};
+		C81638AD2305D2AB009B2120 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C81638AE2305D2C0009B2120 /* Reachability.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		C8B609E62304B1A40048D165 = {
@@ -480,6 +491,7 @@
 				C81638852304E264009B2120 /* TableViewDelegateAndDataSource.swift in Sources */,
 				C816389C2304ED3B009B2120 /* ArrayExtension.swift in Sources */,
 				C81638972304E473009B2120 /* CarfaxDetailsSection.swift in Sources */,
+				C81638AF2305D2C0009B2120 /* Reachability.swift in Sources */,
 				C816387F2304BF8C009B2120 /* CarfaxDispatcher.swift in Sources */,
 				C816387C2304BE3E009B2120 /* CarfaxViewModelConfigurable.swift in Sources */,
 				C81638992304E4DE009B2120 /* BaseTableViewCell.swift in Sources */,

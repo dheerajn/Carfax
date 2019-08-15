@@ -12,7 +12,8 @@ import UIKit
 class BaseViewController: UIViewController, AlertViewPresentable, LoadingScreenPresentable {
     
     open var initialLoad: Bool = true
-    
+    private let reachability = Reachability()!
+
     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
@@ -34,6 +35,7 @@ class BaseViewController: UIViewController, AlertViewPresentable, LoadingScreenP
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.setReachabilityNotifier()
     }
     
     open func makeNavigationBarTransparent() {
@@ -60,5 +62,36 @@ class BaseViewController: UIViewController, AlertViewPresentable, LoadingScreenP
     
     deinit {
         print("\(self.description.debugDescription) deinitialized")
+        NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
+    }
+}
+
+// MARK: - Reachability
+extension BaseViewController {
+    private func setReachabilityNotifier() {
+        //declare this inside of viewWillAppear
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("could not start reachability notifier")
+        }
+    }
+    
+    @objc private func reachabilityChanged(note: Notification) {
+        guard let reachability = note.object as? Reachability else { return }
+        
+        switch reachability.connection {
+        case .wifi:
+            print("Reachable WiFi")
+        case .cellular:
+            print("Reachable Cellular")
+        case .none:
+            print("Network: not reachable")
+            self.removeLoadingAnimationFromSuperView()
+            let okAction: CustomAlertAction = (title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            self.displayAlertWithTitle("No Internet Connection.", message: "Please check your wifi or internet", andActions: [okAction])
+        }
     }
 }
