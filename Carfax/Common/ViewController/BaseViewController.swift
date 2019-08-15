@@ -27,7 +27,7 @@ class BaseViewController: UIViewController, AlertViewPresentable, LoadingScreenP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeNavBarProperties()
+        makeNavigationBarTransparent()
         view.backgroundColor = UIColor.white
         setupNavigationTitleProperties()
     }
@@ -36,17 +36,18 @@ class BaseViewController: UIViewController, AlertViewPresentable, LoadingScreenP
         super.viewWillAppear(animated)
     }
     
-    func setupNavigationTitleProperties(withColor color: UIColor = UIColor.white) {
+    open func makeNavigationBarTransparent() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    func setupNavigationTitleProperties(withColor color: UIColor = UIColor.black) {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: color, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
     }
     
     open func hideLeftNavBarButton() {
         self.navigationItem.setHidesBackButton(true, animated: true)
-    }
-    
-    open func changeNavBarProperties() {
-        self.navigationController?.navigationBar.barTintColor = UIColor.lightGray
-        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     open func setStatusBar() {
