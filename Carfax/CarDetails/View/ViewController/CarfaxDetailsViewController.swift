@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class CarfaxDetailsViewController: BaseViewController {
+    @IBOutlet weak var blurredImageView: UIImageView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,6 +24,7 @@ class CarfaxDetailsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.default
     }
 }
 
@@ -31,6 +33,8 @@ extension CarfaxDetailsViewController {
     func setupUI() {
         self.title = viewModel.screenTitle
         
+        let _ = self.blurredImageView.addMediumBlurEffect()
+
         self.tableView.backgroundColor = UIColor.clear
         self.tableView.register([DetailsTableViewCell.reuseID()])
         
