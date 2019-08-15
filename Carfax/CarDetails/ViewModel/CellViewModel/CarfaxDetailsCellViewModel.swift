@@ -19,21 +19,28 @@ class CarfaxDetailsCellViewModel: DetailsTableViewCellConfigurable, AlertViewPre
         self.yearMakeModelText = String(year ?? 0) + " " + make + " " + model
         self.trimText = "Trim: " + (trim ?? "Not Available")
         self.mileageText = "Mileage: " + String(mileage ?? 0)
-        self.priceText = "Price: " + String(price ?? 0)
         self.callbuttonTextLocal = dealer?.phone ?? ""
         self.imageUrl = imageUrl
         
         self.location = dealer
         var address = dealer?.address ?? ""
         address = address.isEmpty == false ? (address + ", ") : address
-        
         var city = dealer?.city ?? ""
         city = city.isEmpty == false ? (city + ", ") : city
-
         let state = dealer?.state ?? ""
         
         let formattedLocation = address + city + state
         self.locationText = formattedLocation
+        
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.current
+        formatter.numberStyle = .currency
+        if let validPrice = price, let formattedAmount = formatter.string(from: NSNumber(value: validPrice)) {
+            self.priceText = "Price: " + formattedAmount
+        } else {
+            self.priceText = "Price: " + String(price ?? 0)
+        }
+
     }
     
     var yearMakeModelText: String?
