@@ -91,7 +91,7 @@ extension BaseViewController {
             print("Network: not reachable")
             self.removeLoadingAnimationFromSuperView()
             let okAction: CustomAlertAction = (title: "OK", style: UIAlertAction.Style.default, handler: nil)
-            self.displayAlertWithTitle("No Internet Connection.", message: "Please check your wifi or internet", andActions: [okAction])
+            self.displayAlertWithTitle("No Internet Connection.", message: "Please check your wifi or cellular", andActions: [okAction])
         }
     }
 }
