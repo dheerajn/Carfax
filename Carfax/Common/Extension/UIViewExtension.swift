@@ -11,16 +11,16 @@ import UIKit
 
 extension UIView {
     
-    /// Add blur effect on top of the view.
+    /// Add blur effect on top of the view
     ///
-    /// - Returns: <#return value description#>
+    /// - Returns: Returns view with new
     @discardableResult
     func addMediumBlurEffect() -> UIView {
         return addMediumBlurEffectView(false)
     }
     
     func addMediumBlurEffectView(_ animated: Bool) -> UIView {
-        return addBlurEffectView(withBlurStyle: .light, aboveSubview: nil, andDarkAlpha: 0.0, animated: animated)
+        return addBlurEffectView(withBlurStyle: .light, aboveSubview: nil, andDarkAlpha: 0.15, animated: animated)
     }
     
     func addBlurEffectView(withBlurStyle blurStyle: UIBlurEffect.Style, aboveSubview subview: UIView?, andDarkAlpha darkAlpha: CGFloat, animated: Bool) -> UIView {

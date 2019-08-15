@@ -15,22 +15,22 @@ class CarfaxDetailsCellViewModel: DetailsTableViewCellConfigurable, AlertViewPre
     fileprivate var callbuttonTextLocal: String?
     fileprivate var location: Dealer?
     
-    init(year: Int?, make: String, model: String, trim: String?, mileage: Int?, price: Int?, callButtonText: String?, imageUrl: String?, location: Dealer?) {
+    init(year: Int?, make: String, model: String, trim: String?, mileage: Int?, price: Int?, imageUrl: String?, dealer: Dealer?) {
         self.yearMakeModelText = String(year ?? 0) + " " + make + " " + model
         self.trimText = "Trim: " + (trim ?? "Not Available")
         self.mileageText = "Mileage: " + String(mileage ?? 0)
         self.priceText = "Price: " + String(price ?? 0)
-        self.callbuttonTextLocal = callButtonText
+        self.callbuttonTextLocal = dealer?.phone ?? ""
         self.imageUrl = imageUrl
         
-        self.location = location
-        var address = location?.address ?? ""
+        self.location = dealer
+        var address = dealer?.address ?? ""
         address = address.isEmpty == false ? (address + ", ") : address
         
-        var city = location?.city ?? ""
+        var city = dealer?.city ?? ""
         city = city.isEmpty == false ? (city + ", ") : city
 
-        let state = location?.state ?? ""
+        let state = dealer?.state ?? ""
         
         let formattedLocation = address + city + state
         self.locationText = formattedLocation
