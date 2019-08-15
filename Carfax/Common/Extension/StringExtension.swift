@@ -16,6 +16,11 @@ extension String {
         }
     }
     
+    var onlyNumbers: String {
+        return self.components(separatedBy: CharacterSet.decimalDigits.inverted)
+            .joined()
+    }
+    
     fileprivate func format(phoneNumber number: String) -> String? {
         // Remove any character that is not a number
         let numbersOnly = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()

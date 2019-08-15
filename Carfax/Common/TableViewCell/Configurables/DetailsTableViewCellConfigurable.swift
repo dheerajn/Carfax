@@ -18,4 +18,5 @@ public protocol DetailsTableViewCellConfigurable: CellConfigurable {
     var locationText: String? { get }
     var imageUrl: String? { get }
     func callButtonAction()
+    func locationButtonTapped()
 }
