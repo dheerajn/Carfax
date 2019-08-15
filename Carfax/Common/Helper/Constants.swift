@@ -17,7 +17,7 @@ struct Constants {
     }
     
     struct Numbers {
-        static var tableViewCellHeight: CGFloat      = 100.0
+        static var tableViewCellHeight: CGFloat      = 200.0
     }
     
     static let activityIndicatorTag             = 1234567
