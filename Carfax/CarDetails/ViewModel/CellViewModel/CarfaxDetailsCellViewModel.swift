@@ -28,7 +28,7 @@ class CarfaxDetailsCellViewModel: DetailsTableViewCellConfigurable, AlertViewPre
         let city = location?.city ?? ""
         let state = location?.state ?? ""
         
-        let formattedLocation = address + " " + city + " " + state
+        let formattedLocation = address + ", " + city + ", " + state
         self.locationText = formattedLocation
     }
     

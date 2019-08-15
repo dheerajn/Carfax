@@ -91,6 +91,9 @@ extension CarfaxDetailsViewModel {
             switch result {
             case .success(let carsData):
                 self.carfaxData = carsData
+                if let validlisting = self.carfaxData?.listings {
+                    self.carfaxData?.listings = validlisting.sorted { Int($0.year ?? 0) > Int($1.year ?? 1) }
+                }
                 dispatchOnMainQueue {
                     self.delegate?.reloadData()
                     UIApplication.shared.isNetworkActivityIndicatorVisible = false
