@@ -9,5 +9,10 @@
 import Foundation
 
 public protocol CarfaxViewModelConfigurable: TableViewDelegateDataSourceConfigurable {
+    var delegate: CarfaxViewModelDelegate? { get set }
     var screenTitle: String { get }
+}
+
+public protocol CarfaxViewModelDelegate: LoadingScreenPresentable {
+    func reloadData()
 }

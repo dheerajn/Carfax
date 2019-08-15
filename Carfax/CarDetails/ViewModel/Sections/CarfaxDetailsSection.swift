@@ -9,10 +9,10 @@
 import Foundation
 
 enum CarfaxDetailsSection: Int {
-    case moviesSection = 0
+    case details = 0
     
     static var normal: [[CarfaxDetailsSection: [String]]] {
-        return [[.moviesSection: [DetailsTableViewCell.reuseID()]]]
+        return [[.details: [DetailsTableViewCell.reuseID()]]]
     }
     
     private static func sections() -> [[CarfaxDetailsSection:[String]]] {

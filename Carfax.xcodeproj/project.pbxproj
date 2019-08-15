@@ -35,6 +35,8 @@
 		C81638992304E4DE009B2120 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638982304E4DE009B2120 /* BaseTableViewCell.swift */; };
 		C816389C2304ED3B009B2120 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816389B2304ED3B009B2120 /* ArrayExtension.swift */; };
 		C816389E2304ED4F009B2120 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816389D2304ED4F009B2120 /* UITableViewExtension.swift */; };
+		C81638A12304F469009B2120 /* CarfaxDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638A02304F469009B2120 /* CarfaxDetailsCellViewModel.swift */; };
+		C81638A42304F48D009B2120 /* DetailsTableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638A32304F48D009B2120 /* DetailsTableViewCellConfigurable.swift */; };
 		C8B609F32304B1A40048D165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B609F22304B1A40048D165 /* AppDelegate.swift */; };
 		C8B609F82304B1A50048D165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B609F62304B1A50048D165 /* Main.storyboard */; };
 		C8B609FA2304B1A70048D165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B609F92304B1A70048D165 /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		C81638982304E4DE009B2120 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		C816389B2304ED3B009B2120 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		C816389D2304ED4F009B2120 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		C81638A02304F469009B2120 /* CarfaxDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarfaxDetailsCellViewModel.swift; sourceTree = "<group>"; };
+		C81638A32304F48D009B2120 /* DetailsTableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCellConfigurable.swift; sourceTree = "<group>"; };
 		C8B609EF2304B1A40048D165 /* Carfax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carfax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B609F22304B1A40048D165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8B609F72304B1A50048D165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		C81638582304B497009B2120 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C816389F2304F459009B2120 /* CellViewModel */,
 				C81638952304E459009B2120 /* Sections */,
 				C81638792304BE20009B2120 /* CarfaxDetailsViewModel.swift */,
 			);
@@ -220,6 +225,7 @@
 		C816388F2304E3B4009B2120 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				C81638A22304F480009B2120 /* Configurables */,
 				C81638902304E3F5009B2120 /* DetailsTableViewCell.swift */,
 				C81638982304E4DE009B2120 /* BaseTableViewCell.swift */,
 			);
@@ -250,6 +256,22 @@
 				C816389D2304ED4F009B2120 /* UITableViewExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		C816389F2304F459009B2120 /* CellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C81638A02304F469009B2120 /* CarfaxDetailsCellViewModel.swift */,
+			);
+			path = CellViewModel;
+			sourceTree = "<group>";
+		};
+		C81638A22304F480009B2120 /* Configurables */ = {
+			isa = PBXGroup;
+			children = (
+				C81638A32304F48D009B2120 /* DetailsTableViewCellConfigurable.swift */,
+			);
+			path = Configurables;
 			sourceTree = "<group>";
 		};
 		C8B609E62304B1A40048D165 = {
@@ -367,6 +389,7 @@
 				C816388B2304E2AA009B2120 /* TableViewDelegateDataSourceConfigurable.swift in Sources */,
 				C81638782304BE0F009B2120 /* CarfaxDetailsViewController.swift in Sources */,
 				C816386D2304B6B6009B2120 /* CustomAlertController.swift in Sources */,
+				C81638A12304F469009B2120 /* CarfaxDetailsCellViewModel.swift in Sources */,
 				C816388E2304E37C009B2120 /* PlaceholderCellViewModel.swift in Sources */,
 				C81638692304B60C009B2120 /* LoadingScreenPresentable.swift in Sources */,
 				C81638872304E27B009B2120 /* CellViewConfigurable.swift in Sources */,
@@ -379,6 +402,7 @@
 				C816387F2304BF8C009B2120 /* CarfaxDispatcher.swift in Sources */,
 				C816387C2304BE3E009B2120 /* CarfaxViewModelConfigurable.swift in Sources */,
 				C81638992304E4DE009B2120 /* BaseTableViewCell.swift in Sources */,
+				C81638A42304F48D009B2120 /* DetailsTableViewCellConfigurable.swift in Sources */,
 				C81638632304B5BF009B2120 /* BaseViewController.swift in Sources */,
 				C816389E2304ED4F009B2120 /* UITableViewExtension.swift in Sources */,
 			);

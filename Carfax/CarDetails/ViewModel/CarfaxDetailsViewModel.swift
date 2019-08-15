@@ -7,16 +7,23 @@
 //
 
 import Foundation
+import UIKit
 
 //• Vehicle photo
-//• Year, make, model, trim • Price
+//• Year, make, model,
+//• trim
+//• Price
 //• Mileage
 //• Location
 //• Call dealer button
 
 class CarfaxDetailsViewModel: CarfaxViewModelConfigurable {
     
-    init(flowDelegate: CarfaxFlowDelegate) {
+    fileprivate var flowDelegate: CarfaxFlowDelegate?
+    weak var delegate: CarfaxViewModelDelegate?
+    fileprivate var carfaxData: CarFaxData?
+    
+    init(flowDelegate: CarfaxFlowDelegate?) {
         self.getCarsDetials()
     }
     
@@ -27,20 +34,67 @@ class CarfaxDetailsViewModel: CarfaxViewModelConfigurable {
 
 // MARK: - TableViewDelegateDataSourceConfigurable
 extension CarfaxDetailsViewModel {
+    var numberOfSections: Int {
+        return CarfaxDetailsSection.numberOfSections()
+    }
+    
+    func rowsPerSection(_ section: Int) -> Int {
+        let dereferencedSections = CarfaxDetailsSection.currentSection(rawValue: section)
+        
+        switch dereferencedSections {
+        case .details:
+            return self.carfaxData?.listings?.count ?? 0
+        }
+    }
+    
+    func cellViewModel(row: Int, section: Int) -> CellConfigurable {
+        let dereferencedSections = CarfaxDetailsSection.currentSection(rawValue: section)
+        switch dereferencedSections {
+        case .details:
+            guard let validListing = self.carfaxData?.listings, let currentListing = validListing[safe: row] else { return PlaceholderCellViewModel() }
+            
+            let viewModel = CarfaxDetailsCellViewModel(year: currentListing.year,
+                                                       make: currentListing.make ?? "",
+                                                       model: currentListing.model ?? "",
+                                                       trim: currentListing.trim ?? "",
+                                                       mileage: currentListing.mileage,
+                                                       price: currentListing.currentPrice,
+                                                       callButtonText: currentListing.dealer?.phone ?? "")
+            return viewModel
+        }
+    }
+    
+    func heightForRowAt(row: Int, section: Int) -> CGFloat {
+        return Constants.Numbers.tableViewCellHeight
+    }
+    
     func cellReuseID(row: Int, section: Int) -> String {
-        return ""
+        let rawValueSection = CarfaxDetailsSection.currentSection(rawValue: section)
+        return rawValueSection.cellReuseID(row:row)
+    }
+    
+    func didSelectRowAt(row: Int, section: Int) {
+        
     }
 }
 
 // MARK: - Helper methods
 extension CarfaxDetailsViewModel {
     func getCarsDetials() {
+        dispatchOnMainQueueWith(delay: 0.1) {
+            self.delegate?.startLoadingAnimation()
+        }
         CarfaxDispatcher.shared.getCarfaxDetails { (result) in
             switch result {
             case .success(let carsData):
-                print(carsData)
+                self.carfaxData = carsData
+                dispatchOnMainQueue {
+                    self.delegate?.reloadData()
+                }
+                self.delegate?.removeLoadingAnimationFromSuperView()
                 
             case .failure(let error):
+                self.delegate?.removeLoadingAnimationFromSuperView()
                 print(error.localizedDescription)
             }
         }

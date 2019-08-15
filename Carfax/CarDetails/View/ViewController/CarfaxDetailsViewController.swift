@@ -15,7 +15,7 @@ class CarfaxDetailsViewController: BaseViewController {
     
     var viewModel: CarfaxViewModelConfigurable! {
         didSet {
-            
+            viewModel.delegate = self
         }
     }
     fileprivate var tableViewDelDataSource: TableViewDelegateAndDataSource!
@@ -37,6 +37,12 @@ extension CarfaxDetailsViewController {
         self.tableViewDelDataSource  = TableViewDelegateAndDataSource(viewModel: viewModel)
         self.tableView.delegate = self.tableViewDelDataSource
         self.tableView.dataSource = self.tableViewDelDataSource
-        
+    }
+}
+
+// MARK: - CarfaxViewModelDelegate
+extension CarfaxDetailsViewController: CarfaxViewModelDelegate {
+    func reloadData() {
+        self.tableView.reloadData()
     }
 }
