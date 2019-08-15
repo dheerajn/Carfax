@@ -83,6 +83,7 @@ extension CarfaxDetailsViewModel {
     func getCarsDetials() {
         dispatchOnMainQueueWith(delay: 0.1) {
             self.delegate?.startLoadingAnimation()
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
         }
         CarfaxDispatcher.shared.getCarfaxDetails { (result) in
             switch result {
@@ -90,11 +91,15 @@ extension CarfaxDetailsViewModel {
                 self.carfaxData = carsData
                 dispatchOnMainQueue {
                     self.delegate?.reloadData()
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.delegate?.removeLoadingAnimationFromSuperView()
                 }
-                self.delegate?.removeLoadingAnimationFromSuperView()
                 
             case .failure(let error):
-                self.delegate?.removeLoadingAnimationFromSuperView()
+                dispatchOnMainQueue {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.delegate?.removeLoadingAnimationFromSuperView()
+                }
                 print(error.localizedDescription)
             }
         }
