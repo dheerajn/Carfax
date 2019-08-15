@@ -51,6 +51,15 @@ class DetailsTableViewCell: BaseTableViewCell, CellViewConfigurable {
         self.location.contentHorizontalAlignment = .left
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.location.setTitle(nil, for: .normal)
+        self.callButton.setTitle(nil, for: .normal)
+        self.yearMakeModel.text = nil
+        self.trim.text = nil
+        self.mileage.text = nil
+        self.price.text = nil
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

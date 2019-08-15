@@ -14,9 +14,9 @@ public extension UIImageView {
         let url = URL(string: forUrl)
         let placeholderImage = defaultImage
         self.kf.indicatorType = .activity
-//        let processor = RoundCornerImageProcessor(cornerRadius: 20) //this is messing the complete image cos of th way we are getting it
+        let processor = RoundCornerImageProcessor(cornerRadius: 20)
         
-        self.kf.setImage(with: url, placeholder: placeholderImage, options: [.transition(.fade(0.2))/*, .processor(processor)*/]) { (result) in
+        self.kf.setImage(with: url, placeholder: placeholderImage, options: [.transition(.fade(0.2)), .processor(processor)]) { (result) in
             switch result {
             case .success(let value):
                 print("Image Got from:", value.cacheType)
