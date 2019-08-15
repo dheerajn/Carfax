@@ -75,6 +75,6 @@ class DetailsTableViewCell: BaseTableViewCell, CellViewConfigurable {
     }
     
     static func reuseID() -> String {
-        return self.description()
+        return "DetailsTableViewCell"
     }
 }
