@@ -59,7 +59,8 @@ extension CarfaxDetailsViewModel {
                                                        trim: currentListing.trim ?? "",
                                                        mileage: currentListing.mileage,
                                                        price: currentListing.currentPrice,
-                                                       callButtonText: currentListing.dealer?.phone ?? "")
+                                                       callButtonText: currentListing.dealer?.phone ?? "",
+                                                       imageUrl: currentListing.images?.firstPhoto?.medium)
             return viewModel
         }
     }

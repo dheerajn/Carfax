@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailsTableViewCell: BaseTableViewCell, CellViewConfigurable {
 
@@ -18,6 +19,13 @@ class DetailsTableViewCell: BaseTableViewCell, CellViewConfigurable {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var callButton: UIButton!
     
+    var imageUrl: String? {
+        didSet {
+            guard let validImageUrl = imageUrl else { return }
+            
+            self.mainImageView.downloadImage(forUrl: validImageUrl, defaultImage: UIImage.DefaultImage, completionBlock: nil)
+        }
+    }
     var viewModel: CellConfigurable! {
         didSet {
             guard let vm = viewModel as? DetailsTableViewCellConfigurable else { return }
@@ -29,6 +37,7 @@ class DetailsTableViewCell: BaseTableViewCell, CellViewConfigurable {
                 self.mileage.text = vm.mileageText
                 self.price.text = vm.priceText
                 self.callButton.setTitle(vm.callButtonText, for: UIControl.State.normal)
+                self.imageUrl = vm.imageUrl
             }
         }
     }

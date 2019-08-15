@@ -37,13 +37,19 @@
 		C816389E2304ED4F009B2120 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816389D2304ED4F009B2120 /* UITableViewExtension.swift */; };
 		C81638A12304F469009B2120 /* CarfaxDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638A02304F469009B2120 /* CarfaxDetailsCellViewModel.swift */; };
 		C81638A42304F48D009B2120 /* DetailsTableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638A32304F48D009B2120 /* DetailsTableViewCellConfigurable.swift */; };
+		C81638A62305A3EB009B2120 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638A52305A3EB009B2120 /* UIImageViewExtension.swift */; };
+		C81638A82305A472009B2120 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81638A72305A472009B2120 /* UIImageExtension.swift */; };
 		C8B609F32304B1A40048D165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B609F22304B1A40048D165 /* AppDelegate.swift */; };
 		C8B609F82304B1A50048D165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B609F62304B1A50048D165 /* Main.storyboard */; };
 		C8B609FA2304B1A70048D165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B609F92304B1A70048D165 /* Assets.xcassets */; };
 		C8B609FD2304B1A70048D165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B609FB2304B1A70048D165 /* LaunchScreen.storyboard */; };
+		D8653C0A9EFB3F2232757113 /* Pods_Carfax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDDACB87158F7AD9DE22552 /* Pods_Carfax.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FDDACB87158F7AD9DE22552 /* Pods_Carfax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carfax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4464A24607B4A6ED65B4E602 /* Pods-Carfax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carfax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carfax/Pods-Carfax.debug.xcconfig"; sourceTree = "<group>"; };
+		A2DF8CA300CF0F10584AA16B /* Pods-Carfax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carfax.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carfax/Pods-Carfax.release.xcconfig"; sourceTree = "<group>"; };
 		C816385A2304B4BC009B2120 /* CarfaxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarfaxModel.swift; sourceTree = "<group>"; };
 		C816385E2304B531009B2120 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C81638602304B55A009B2120 /* CarfaxFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarfaxFlowController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,8 @@
 		C816389D2304ED4F009B2120 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C81638A02304F469009B2120 /* CarfaxDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarfaxDetailsCellViewModel.swift; sourceTree = "<group>"; };
 		C81638A32304F48D009B2120 /* DetailsTableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCellConfigurable.swift; sourceTree = "<group>"; };
+		C81638A52305A3EB009B2120 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		C81638A72305A472009B2120 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		C8B609EF2304B1A40048D165 /* Carfax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carfax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B609F22304B1A40048D165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8B609F72304B1A50048D165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,12 +95,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8653C0A9EFB3F2232757113 /* Pods_Carfax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B9ED5984A4DDB0586020D2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4464A24607B4A6ED65B4E602 /* Pods-Carfax.debug.xcconfig */,
+				A2DF8CA300CF0F10584AA16B /* Pods-Carfax.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F8AD72718F9E42367F8D5F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FDDACB87158F7AD9DE22552 /* Pods_Carfax.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C81638562304B485009B2120 /* CarDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +280,8 @@
 			children = (
 				C816389B2304ED3B009B2120 /* ArrayExtension.swift */,
 				C816389D2304ED4F009B2120 /* UITableViewExtension.swift */,
+				C81638A52305A3EB009B2120 /* UIImageViewExtension.swift */,
+				C81638A72305A472009B2120 /* UIImageExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -279,6 +307,8 @@
 			children = (
 				C8B609F12304B1A40048D165 /* Carfax */,
 				C8B609F02304B1A40048D165 /* Products */,
+				1B9ED5984A4DDB0586020D2B /* Pods */,
+				6F8AD72718F9E42367F8D5F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,9 +340,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8B60A012304B1A70048D165 /* Build configuration list for PBXNativeTarget "Carfax" */;
 			buildPhases = (
+				4F3F983CC09517D226ECAC16 /* [CP] Check Pods Manifest.lock */,
 				C8B609EB2304B1A40048D165 /* Sources */,
 				C8B609EC2304B1A40048D165 /* Frameworks */,
 				C8B609ED2304B1A40048D165 /* Resources */,
+				002078CED116554AB34484AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,11 +402,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		002078CED116554AB34484AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Carfax/Pods-Carfax-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Carfax/Pods-Carfax-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F3F983CC09517D226ECAC16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Carfax-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C8B609EB2304B1A40048D165 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81638A62305A3EB009B2120 /* UIImageViewExtension.swift in Sources */,
 				C816385B2304B4BC009B2120 /* CarfaxModel.swift in Sources */,
 				C81638702304B6E7009B2120 /* Constants.swift in Sources */,
 				C81638812304BFB9009B2120 /* CarfaxDetialsServiceCall.swift in Sources */,
@@ -389,6 +461,7 @@
 				C816388B2304E2AA009B2120 /* TableViewDelegateDataSourceConfigurable.swift in Sources */,
 				C81638782304BE0F009B2120 /* CarfaxDetailsViewController.swift in Sources */,
 				C816386D2304B6B6009B2120 /* CustomAlertController.swift in Sources */,
+				C81638A82305A472009B2120 /* UIImageExtension.swift in Sources */,
 				C81638A12304F469009B2120 /* CarfaxDetailsCellViewModel.swift in Sources */,
 				C816388E2304E37C009B2120 /* PlaceholderCellViewModel.swift in Sources */,
 				C81638692304B60C009B2120 /* LoadingScreenPresentable.swift in Sources */,
@@ -548,6 +621,7 @@
 		};
 		C8B60A022304B1A70048D165 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4464A24607B4A6ED65B4E602 /* Pods-Carfax.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -560,12 +634,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PurplePetals.Carfax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C8B60A032304B1A70048D165 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2DF8CA300CF0F10584AA16B /* Pods-Carfax.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -578,7 +653,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PurplePetals.Carfax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

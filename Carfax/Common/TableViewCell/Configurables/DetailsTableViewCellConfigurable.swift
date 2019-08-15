@@ -16,6 +16,6 @@ public protocol DetailsTableViewCellConfigurable: CellConfigurable {
     var priceText: String? { get }
     var callButtonText: String? { get }
     var locationText: String? { get }
-    
+    var imageUrl: String? { get }
     func callButtonAction()
 }
