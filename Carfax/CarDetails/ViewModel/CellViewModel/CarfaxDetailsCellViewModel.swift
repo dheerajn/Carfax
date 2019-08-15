@@ -30,11 +30,11 @@ class CarfaxDetailsCellViewModel: DetailsTableViewCellConfigurable {
     var imageUrl: String?
 
     var callButtonText: String? {
-        return callbuttonTextLocal
+        return self.callbuttonTextLocal?.asPhoneNumber
     }
     
     func callButtonAction() {
-        guard let validNumber = self.callButtonText, let url = URL(string: validNumber) else { return }
+        guard let validNumber = self.callButtonText, let url = URL(string: "tel://\(validNumber)") else { return }
         if UIApplication.shared.canOpenURL(url) == true {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
