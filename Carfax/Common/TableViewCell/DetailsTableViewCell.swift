@@ -38,18 +38,17 @@ class DetailsTableViewCell: BaseTableViewCell, CellViewConfigurable {
                 self.callButton.setTitle(vm.callButtonText, for: UIControl.State.normal)
                 self.imageUrl = vm.imageUrl
                 self.location.setTitle(vm.locationText, for: UIControl.State.normal)
-                
-                self.location.titleLabel?.adjustsFontSizeToFitWidth = true
-                self.location.titleLabel?.minimumScaleFactor = 0.5
-                self.location.titleLabel?.numberOfLines = 0
-                self.location.contentHorizontalAlignment = .left
             }
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.location.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.location.titleLabel?.minimumScaleFactor = 0.5
+        self.location.titleLabel?.numberOfLines = 0
+        self.location.contentHorizontalAlignment = .left
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
