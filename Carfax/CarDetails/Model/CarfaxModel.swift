@@ -8,7 +8,7 @@
 
 import Foundation
 
-///This is the model calss for the complete Carfax
+///This is the model class for the complete Carfax
 
 public struct CarFaxData: Codable {
     var backfillCount: Int?
@@ -16,16 +16,35 @@ public struct CarFaxData: Codable {
     var dealerNewCount: Int?
     var dealerUsedCount: Int?
     var enhancedCount: Int?
-    //    var facetCountMap: String? //Todo:
+    var facetCountMap: FacetCountMap?
     var listings:[Listings]?
     var page: Int?
     var pageSize: Int?
-    //    var relatedLinks: String? //TODO
+    var relatedLinks: RelatedLinks?
     var searchArea: SearchArea?
     var searchRequest: SearchRequest?
     var seoUrl: String?
     var totalListingCount: Int?
     var totalPageCount: Int?
+}
+
+/// IMP: This is different case. This looks like card coded value. Since this is for testing, I hard coded the values. We can talk to backend and come to an agreement on which string needs to be used for this.
+struct RelatedLinks: Codable {
+    var acuraLevels: [RelatedData]?
+    var similarCars: [RelatedData]?
+    var usedAcura: [RelatedData]?
+    
+    enum CodingKeys: String, CodingKey {
+        case acuraLevels = "Acura ILX Trim Levels"
+        case similarCars = "Similar Cars"
+        case usedAcura = "Used Acura ILX by Year"
+    }
+}
+
+struct RelatedData: Codable {
+    var count: Int?
+    var text: String?
+    var url: String?
 }
 
 struct SearchRequest: Codable {
@@ -38,6 +57,43 @@ struct SearchRequest: Codable {
     var webHost: String?
     var yearRange: YearRange?
     var zip: String?
+}
+
+struct FacetCountMap: Codable {
+    var bedType: Facets?
+    var bodyStyle: Facets?
+    var cabType: Facets?
+    var driveType: Facets?
+    var engines: Facets?
+    var exteriorColor: Facets?
+    var fuelType: Facets?
+    var interiorColor: Facets?
+    var make: Facets?
+    var makeModelOnly: Facets?
+    var mileageRange: Facets?
+    var model: Facets?
+    var noAccidents: Facets?
+    var oneOwner: Facets?
+    var options: Facets?
+    var personalUse: Facets?
+    var pillarCombos: Facets?
+    var popularOptions: Facets?
+    var price: Facets?
+    var serviceRecords: Facets?
+    var transmission: Facets?
+    var trim: Facets?
+    var yearRange: Facets?
+    
+}
+
+struct Facets: Codable {
+    var facets: [FacetsSpecific]?
+}
+
+struct FacetsSpecific: Codable {
+    var encodedName: String?
+    var name: String?
+    var value: Int?
 }
 
 struct MileageRange: Codable {
@@ -109,13 +165,13 @@ struct Listings: Codable {
     var noAccidents: Bool?
     var oneOwner: Bool?
     var onePrice: Int?
-    //    var onePriceArrows: Int? //TODO
+        var onePriceArrows: [OnePriceArrows]?
     var onlineOnly: Bool?
-    //    var ownerHistory: String? //TODO
+    var ownerHistory: OwnerHistory?
     var personalUse: Bool?
     var recordType: String?
     var sentLead: Bool?
-    //    var serviceHistory: String? //TODO
+    var serviceHistory: ServiceHistory?
     var serviceRecords: Bool?
     var sortScore: Double?
     var stockNumber: String?
@@ -128,6 +184,46 @@ struct Listings: Codable {
     var vehicleUseHistory: VehicleUseHistory?
     var vin: String?
     var year: Int?
+}
+
+struct OnePriceArrows: Codable {
+    var arrow: String?
+    var arrowUrl: String?
+    var icon: String?
+    var iconUrl: String?
+    var order: Int?
+    var text: String?
+}
+
+struct OwnerHistory: Codable {
+    var history: [OwnerSpecificHistory]?
+    var icon: String?
+    var iconUrl: String?
+    var text: String?
+}
+
+struct OwnerSpecificHistory: Codable {
+    var endOwnershipDate: String?
+    var ownerNumber: Int?
+    var purchaseDate: String?
+    var state: String?
+}
+
+struct ServiceHistory: Codable {
+    var history: [History]?
+    var icon: String?
+    var iconUrl: String?
+    var number: Int?
+    var text: String?
+}
+
+struct History: Codable {
+    var city: String?
+    var date: String?
+    var description: String?
+    var odometerReading: Int?
+    var source: String?
+    var state: String?
 }
 
 struct VehicleUseHistory: Codable {
