@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 public protocol CarfaxDetailsPresentable {
+    
+    /// This method will show the Carfax landing view
+    ///
+    /// - Parameter viewModel: ViewModel for the view controlle
     func showCarfaxDetails(viewModel: CarfaxViewModelConfigurable)
 }
 

@@ -13,7 +13,7 @@ class BaseViewController: UIViewController, AlertViewPresentable, LoadingScreenP
     
     open var initialLoad: Bool = true
     private let reachability = Reachability()!
-
+    
     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }

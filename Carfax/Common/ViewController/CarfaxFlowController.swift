@@ -11,6 +11,7 @@ import UIKit
 
 public protocol CarfaxFlowDelegate: NavigationControllerAnimationPresentable, CarfaxDetailsPresentable {}
 
+/// This is responsible for navigating views
 public class CarfaxFlowController: CarfaxFlowDelegate {
     
     public var navigationController: UINavigationController?

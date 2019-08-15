@@ -11,6 +11,9 @@ import UIKit
 
 extension UIView {
     
+    /// Add blur effect on top of the view.
+    ///
+    /// - Returns: <#return value description#>
     @discardableResult
     func addMediumBlurEffect() -> UIView {
         return addMediumBlurEffectView(false)

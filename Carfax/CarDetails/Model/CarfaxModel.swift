@@ -8,6 +8,8 @@
 
 import Foundation
 
+///This is the model calss for the complete Carfax
+
 public struct CarFaxData: Codable {
     var backfillCount: Int?
     var breadCrumbs: [BreadCrumbs]?
@@ -25,6 +27,7 @@ public struct CarFaxData: Codable {
     var totalListingCount: Int?
     var totalPageCount: Int?
 }
+
 struct SearchRequest: Codable {
     var make: String?
     var mileageRange: MileageRange?
@@ -36,17 +39,21 @@ struct SearchRequest: Codable {
     var yearRange: YearRange?
     var zip: String?
 }
+
 struct MileageRange: Codable {
     var max: Int?
     var min: Int?
 }
+
 struct PriceRange: Codable {
     var min: Int?
 }
+
 struct YearRange: Codable {
     var max: Int?
     var min: Int?
 }
+
 struct SearchArea: Codable {
     var city: String?
     var dynamicRadii: [Int]?
@@ -57,11 +64,13 @@ struct SearchArea: Codable {
     var state: String?
     var zip: String?
 }
+
 struct BreadCrumbs: Codable {
     var label: String?
     var link: String?
     var position: Int?
 }
+
 struct Listings: Codable {
     var accidentHistory: AccidentHistory?
     var advantage: Bool?
@@ -120,23 +129,27 @@ struct Listings: Codable {
     var vin: String?
     var year: Int?
 }
+
 struct VehicleUseHistory: Codable {
     var history: [VehicleHistory]?
     var icon: String?
     var iconUrl: String?
     var text: String?
 }
+
 struct VehicleHistory: Codable {
     var averageMilesPerYear: Int?
     var ownerNumber: Int?
     var useType: String?
 }
+
 struct AccidentHistory: Codable {
     var accidentSummary: [String]?
     var icon: String?
     var iconUrl: String?
     var text: String?
 }
+
 struct Dealer: Codable {
     var address: String?
     var carfaxId: String?
@@ -159,6 +172,7 @@ struct Dealer: Codable {
     var state: String?
     var zip: String?
 }
+
 struct CarImages: Codable {
     var baseUrl: String?
     var firstPhoto: ImageVariations?
@@ -166,11 +180,13 @@ struct CarImages: Codable {
     var medium: [String]?
     var small: [String]?
 }
+
 struct ImageVariations: Codable {
     var large: String?
     var medium: String?
     var small: String?
 }
+
 struct MonthlyPaymentEstimate: Codable {
     var downPaymentAmount: Double?
     var downPaymentPercent: Int?

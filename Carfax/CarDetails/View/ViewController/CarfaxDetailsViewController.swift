@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class CarfaxDetailsViewController: BaseViewController {
-    @IBOutlet weak var blurredImageView: UIImageView!
     
+    @IBOutlet weak var blurredImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: CarfaxViewModelConfigurable! {

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// This class is responsible for showing the sections depending on the logic we have. This come handy when we have so many different sections.
 enum CarfaxDetailsSection: Int {
     case details = 0
     

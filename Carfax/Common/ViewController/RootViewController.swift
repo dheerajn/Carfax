@@ -11,6 +11,7 @@ import UIKit
 
 class RootViewController: BaseViewController {
     
+    /// This should be a strong property to hold it so we can navigate everywhere
     var flowDelegate: CarfaxFlowDelegate?
     
     override func viewDidLoad() {

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension UITableView {
+    
     public func register(_ nibs: [String]?, inBundle bundle: Bundle? = nil) {
         if let nibArray = nibs {
             for nibName in nibArray {

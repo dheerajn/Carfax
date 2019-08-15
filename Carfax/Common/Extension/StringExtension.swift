@@ -10,12 +10,14 @@ import Foundation
 
 extension String {
     
+    /// Given number string will be changed to US formated number
     var asPhoneNumber: String? {
         get {
             return format(phoneNumber: self)
         }
     }
     
+    /// Strips off everything besides numbers
     var onlyNumbers: String {
         return self.components(separatedBy: CharacterSet.decimalDigits.inverted)
             .joined()

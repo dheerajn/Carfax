@@ -10,6 +10,13 @@ import Foundation
 import Kingfisher
 
 public extension UIImageView {
+    
+    /// Downloads the image with the given url.
+    ///
+    /// - Parameters:
+    ///   - forUrl: Url to download from
+    ///   - defaultImage: Default image to show when service fails.
+    ///   - completionBlock: Block to execute once we get the response.
     func downloadImage(forUrl: String, defaultImage: UIImage, completionBlock: ((Bool) -> Void)?) {
         let url = URL(string: forUrl)
         let placeholderImage = defaultImage

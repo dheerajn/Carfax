@@ -9,6 +9,10 @@
 import Foundation
 
 public protocol CarfaxDetialsRestCall {
+    
+    /// Makes the service call to the Carfax Data
+    ///
+    /// - Parameter completionHandler: Result of the service call
     func getCarfaxDetails(completionHandler: @escaping CarfaxCompHandler)
 }
 
