@@ -13,6 +13,7 @@ struct Constants {
     
     struct ViewControllers {
         static let mainStoryboardIdentifier         = "Main"
+        static let carfaxDetailsViewController      = "CarfaxDetailsViewController"
     }
     
     static let activityIndicatorTag             = 1234567

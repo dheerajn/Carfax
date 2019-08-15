@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CarFaxData: Codable {
+public struct CarFaxData: Codable {
     var backfillCount: Int?
     var breadCrumbs: [BreadCrumbs]?
     var dealerNewCount: Int?

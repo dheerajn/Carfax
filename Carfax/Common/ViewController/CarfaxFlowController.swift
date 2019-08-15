@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol CarfaxFlowDelegate: NavigationControllerAnimationPresentable {}
+public protocol CarfaxFlowDelegate: NavigationControllerAnimationPresentable, CarfaxDetailsPresentable {}
 
 public class CarfaxFlowController: CarfaxFlowDelegate {
     
@@ -18,6 +18,7 @@ public class CarfaxFlowController: CarfaxFlowDelegate {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         
+        let viewModel = CarfaxDetailsViewModel(flowDelegate: self)
+        self.showCarfaxDetails(viewModel: viewModel)
     }
 }
-
