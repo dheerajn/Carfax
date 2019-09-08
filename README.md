@@ -1,4 +1,4 @@
-# Carfax
+# SampleApp
 #This app works on Mvvm + Protocol Oriented Programming
 #Uses Kinfisher to download the images
 #Checks internet connection using Reachability
