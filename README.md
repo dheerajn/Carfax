@@ -4,5 +4,5 @@
 #Checks internet connection using Reachability
 #There is still a lot we can improve in this, but since it is a sample, made it simple.
 #Routes user to Map when tapped on location
-#Calls dealer when tapped on call
+#Calls dealer when tapped on call button
 #List is sorted based on the year
